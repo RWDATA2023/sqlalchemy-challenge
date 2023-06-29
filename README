@@ -1,0 +1,35 @@
+Climate Analysis and API
+This project is focused on analyzing climate data in Hawaii and creating a Flask API to provide access to the data contained in CSV files. The analysis includes precipitation analysis, station analysis, and temperature observation analysis. The API allows users to retrieve precipitation data, station information, temperature observations, and temperature statistics for specific date ranges.
+
+Technologies Used
+Python
+Flask
+SQLAlchemy
+SQLite
+Pandas
+Matplotlib
+
+Installation Guide
+
+Clone the repository to your local machine.
+Navigate to the project folder.
+Ensure that you have Python 3.x installed.
+Install the necessary dependencies using the following command: pip install -r requirements.txt
+
+Usage
+
+Run the Jupyter Notebook file climate_analysis.ipynb to perform the initial data analysis and generate the SQLite database file hawaii.sqlite.
+Once the database file is generated, run the Flask application using the command: python app.py
+Open a web browser and navigate to http://localhost:5000 to access the Climate App API.
+The landing page will display the available routes and their descriptions.
+Click on the provided links or use the appropriate route URLs to access the desired data.
+
+API Routes
+
+/api/v1.0/precipitation: Returns a JSON representation of the precipitation data for the last 12 months.
+/api/v1.0/stations: Returns a JSON list of stations in the dataset.
+/api/v1.0/tobs: Returns a JSON list of temperature observations for the most active station in the last 12 months.
+/api/v1.0/<start>: Returns a JSON list of temperature statistics (minimum, average, maximum) from the specified start date to the end of the dataset.
+/api/v1.0/<start>/<end>: Returns a JSON list of temperature statistics (minimum, average, maximum) for the specified date range.
+
+This project was created by Ryan Williams for the Module 10 Challenge of GW Data Analysis and Visualization Bootcamp
